@@ -1,7 +1,11 @@
-import re
+from pathlib import Path
 
-text = "apple#banana!mango@orange;kiwi"
-pattern = r"[#@;!]"
-fruits = re.split(pattern, text)
+# Створення об'єкту Path для файлу
+file_path = Path('/path/to/file.txt')
 
-print(fruits)
+# Перевірка, чи файл існує, перш ніж видаляти
+if file_path.exists():
+    file_path.unlink()
+    print(f'Файл {file_path} було видалено')
+else:
+    print(f'Файл {file_path} не існує')
