@@ -1,11 +1,6 @@
-from pathlib import Path
+from math_operations import calculate_area
 
-# Створення об'єкту Path для файлу
-file_path = Path('/path/to/file.txt')
+area1 = calculate_area(10, 5)
+area2 = calculate_area(20, 15)
 
-# Перевірка, чи файл існує, перш ніж видаляти
-if file_path.exists():
-    file_path.unlink()
-    print(f'Файл {file_path} було видалено')
-else:
-    print(f'Файл {file_path} не існує')
+print(f"Area 1: {area1}, Area 2: {area2}")

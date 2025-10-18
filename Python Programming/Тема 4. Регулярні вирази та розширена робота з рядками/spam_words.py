@@ -15,6 +15,9 @@ def remove_spam_words(message: str) -> str:
         message = re.sub(rf"\b{spam_word}\b", "*#!", message)
     return message
 
+
+
+
 assert remove_spam_words("Guido van Rossum") == '*'
 assert remove_spam_words("Python") == '*' # '******'
 assert remove_spam_words("Guido van Rossum Python") == '* *'
